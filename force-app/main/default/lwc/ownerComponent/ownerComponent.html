@@ -1,0 +1,12 @@
+<template>
+    
+    <lightning-card title="Owner Component">
+        <c-container>
+            <c-sample-component company-name="Cognizant Technology Solutions." onsampleevent={handleSampleevent}></c-sample-component>
+        </c-container>
+        <template if:true={eventParams}>
+                    {eventParams.fname}  {eventParams.lname}
+        </template>
+        <lightning-button label="Update Name" onclick={handleClick}></lightning-button>
+    </lightning-card>
+</template>

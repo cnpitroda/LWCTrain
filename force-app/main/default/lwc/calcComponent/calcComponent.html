@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title={titlelabel}>
+        <lightning-combobox name="Langugage Selector"
+        label="Language" value={value} placeholder="Select Language"
+        options={options} onchange={handleComboChange} ></lightning-combobox>
+        
+        <lightning-input title={num1label} name="no1" label={num1label} type="Number" onchange={handleChange}></lightning-input>
+        <lightning-input title={num2label} name="no2" label={num2label} type="Number" onchange={handleChange}></lightning-input>
+        <lightning-button-group>
+            <lightning-button name="+" label="+" onclick={handleClick}></lightning-button>
+            <lightning-button name="-" label="-" onclick={handleClick}></lightning-button>
+            <lightning-button name="*" label="*" onclick={handleClick}></lightning-button>
+            <lightning-button name="/" label="/" onclick={handleClick}></lightning-button>
+        </lightning-button-group>
+        <p>{resultlabel}:{result}</p>
+    </lightning-card>
+</template>

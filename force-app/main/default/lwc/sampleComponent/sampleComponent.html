@@ -1,0 +1,26 @@
+<template>
+      <template if:true={firstTemplate}>
+          <lightning-card title="Sample Component">
+            <h1>Sample Component (h1)</h1>
+          <lightning-input name="firstName" label="FirstName" onchange={handleChange} ></lightning-input>
+            <lightning-input name="lastName" label="LastName" onchange={handleChange}></lightning-input>
+            <lightning-formatted-text value={companyName}></lightning-formatted-text>
+            <lightning-formatted-text value={fullName}></lightning-formatted-text>
+            <p>Company Name = {companyName}</p>
+          </lightning-card> 
+       </template>
+
+       <template if:false={firstTemplate}>
+             <lightning-card title="Template 2">
+                <template for:each={items} for:item="item">
+                    <li key={item.id}>
+                      {item.name}
+                    </li>
+                </template>
+             </lightning-card>
+       </template>
+       <div class="slds-align_absolute-center" >
+       <lightning-button variant="brand" label="Switch" onclick={handleSwitch}></lightning-button>
+       <lightning-button label="NotifyParent" onclick={handleNotifyParent}></lightning-button>
+      </div>
+ </template>
