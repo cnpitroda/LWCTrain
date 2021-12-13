@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="ViewAccountParent">
+        <lightning-record-view-form object-api-name={objectName} record-id={recordId}>
+            <lightning-output-field field-name={nameField}></lightning-output-field>
+            <div>
+                <lightning-formatted-email value={ownerEmailField}></lightning-formatted-email>
+            </div>
+            <div>
+            <lightning-formatted-text value={fullNameField}></lightning-formatted-text>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>
